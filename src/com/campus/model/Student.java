@@ -1,7 +1,7 @@
 package com.campus.model;
 
 public class Student {
-    // Encapsulation - data handling 
+    // Encapsulation - data handling
     // instance variables
     private int studentid;
     private String studentname;
@@ -11,7 +11,7 @@ public class Student {
 
     // static varivable
     static int studentCount = 0;
-    
+
     // default constructor
     public Student() {
         studentCount++;
@@ -51,6 +51,7 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
+
     public String getDepartment() {
         return department;
     }
@@ -58,12 +59,15 @@ public class Student {
     public void setDepartment(String department) {
         this.department = department;
     }
+
     public int[] getMarks() {
         return marks;
-    }   
+    }
+
     public void setMarks(int[] marks) {
         this.marks = marks;
     }
+
     // instance method - belongs to object
     public void displayStudentInfo() {
         System.out.println("Student ID: " + studentid);
@@ -76,13 +80,13 @@ public class Student {
         displayStudentInfo();
         if (showMarks) {
             System.out.println("Marks : " + java.util.Arrays.toString(marks));
-            
+
         }
-        // static method - belongs to class,not object
+    }
+
+    // static method - belongs to class,not object
     public static void displayStudentCount() {
         System.out.println("Total Students: " + studentCount);
     }
-
-
 
 }
